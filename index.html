@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        alert('View in DESKTOP SITE for better experience');
+    </script>
+
+    <section class="main">
+        <h1 style="align-items: center">WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY</h1>
+        <div class="content">
+            <div style="margin-left: 8%">
+            <label>ENTER YOUR NAME</label><br>
+            <input type="text" name="" id="nameid">
+            </div>
+            <br>
+            <div>
+                <img src="https://thumbs.dreamstime.com/b/d-funny-character-cartoon-sympathetic-looking-business-man-dear-person-suit-glasses-tie-47992346.jpg" height="100%" width="100%" class="image">
+            </div>
+            <br>
+                <button>CLICK HERE</button>
+            
+        </div>
+    </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+</script>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            const name=$('#nameid').val();
+            $('.image').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+        });
+    });
+</script>
+
+</body>
+</html>     
